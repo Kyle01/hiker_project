@@ -5,7 +5,7 @@ module.exports = {
     entry: './frontend/index.jsx',
     output: {
         path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
-        filename: 'bundle.js'
+        filename: './bundle.js'
     },
     resolve: {
         extensions: ['.js', '.jsx', '*']
@@ -13,12 +13,12 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
+                test: [/\.jsx?$/],
                 exclude: /(node_modules)/,
                 use: {
                     loader: 'babel-loader',
                     query: {
-                        presets: ['env', 'react']
+                        presets: ['@babel/env', '@babel/react']
                     }
                 },
             }
