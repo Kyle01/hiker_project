@@ -23,7 +23,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --mode development --watch --port 5000"
+    "start": "webpack --mode development --watch"
   },
   "repository": {
     "type": "git",
